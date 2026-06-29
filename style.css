@@ -1,0 +1,152 @@
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Menu de Navegação */
+nav {
+    background-color: #0f2027;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #2a5298;
+}
+
+/* Seções e Cards */
+.card {
+    background: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #1e3c72;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #2a5298;
+    padding-bottom: 5px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Estilização do Quiz */
+.quiz-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-left: 5px solid #2a5298;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.pergunta {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.opcoes button {
+    background-color: white;
+    border: 2px solid #ddd;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.opcoes button:hover {
+    background-color: #e2e8f0;
+    border-color: #2a5298;
+}
+
+#resultado-quiz {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Rodapé */
+footer {
+    background-color: #0f2027;
+    color: #a0aec0;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+/* Responsividade Básica */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    nav {
+        flex-direction: column;
+    }
+    nav a {
+        padding: 10px;
+        border-bottom: 1px solid #1a2a3a;
+    }
+}
