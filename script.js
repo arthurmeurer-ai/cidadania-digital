@@ -1,0 +1,27 @@
+function verificarResposta(eCorreta, elementoClicado) {
+    const resultadoText = document.getElementById("resultado-quiz");
+    const botoes = document.querySelectorAll(".opcoes button");
+
+    // Desabilita todos os botões após a escolha para o usuário não ficar clicando várias vezes
+    botoes.forEach(botao => {
+        botao.disabled = true;
+        botao.style.opacity = "0.6";
+    });
+
+    // Destaca e exibe o resultado baseado na escolha
+    if (eCorreta) {
+        elementoClicado.style.backgroundColor = "#c6f6d5";
+        elementoClicado.style.borderColor = "#38a169";
+        elementoClicado.style.opacity = "1";
+        
+        resultadoText.innerText = "🎉 Correto! Verificar fontes confiáveis e agências de checagem é a melhor forma de não ser enganado por Deepfakes.";
+        resultadoText.style.color = "#2f855a";
+    } else {
+        elementoClicado.style.backgroundColor = "#fed7d7";
+        elementoClicado.style.borderColor = "#e53e3e";
+        elementoClicado.style.opacity = "1";
+        
+        resultadoText.innerText = "❌ Incorreto. Compartilhar sem checar espalha desinformação, e ignorar permite que o problema continue. Sempre pesquise em fontes confiáveis!";
+        resultadoText.style.color = "#c53030";
+    }
+}
